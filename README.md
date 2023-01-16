@@ -1,1 +1,1 @@
-# MiliSim
+# long_reads_rna_seq_simulator
