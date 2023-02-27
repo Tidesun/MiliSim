@@ -12,7 +12,7 @@ pip install -r requirements.txt
 ```
 ### Download pre-trained KDE models for the truncation profile
 1. `cd MiniSim & source base/bin/activate`
-2. Download `models.zip` from https://www.dropbox.com/s/aoyiqiun7s09cj6/models.zip?dl=0
+2. Download `models.zip` from https://www.dropbox.com/sh/ju9go788dwq3znr/AACsVfaVXyPZF7YxeqEBq_8Ga?dl=0
 3. `unzip models.zip`
 ## Usage
 ### Simulate long reads RNA-seq data
