@@ -3,13 +3,11 @@ from pathlib import Path
 parser = argparse.ArgumentParser(description="Estimate weights",add_help=True)
 requiredNamed = parser.add_argument_group('required named arguments')
 requiredNamed.add_argument('--kde_model_path', type=str, help="Path of KDE model",required=True)
-requiredNamed.add_argument('--rname', type=str, help="Which chormosome",required=True)
 requiredNamed.add_argument('--annotation', type=str, help="GTF annotation",required=True)
 requiredNamed.add_argument('-o','--output', type=str, help="The path of output weight",required=True)
 args = parser.parse_args()
 output_dir = args.output
 kde_model_path = args.kde_model_path
-selected_rname = args.rname
 # temp_dir = f"{output_dir}_temp/"
 Path(output_dir).mkdir(exist_ok=True,parents=True)
 import dill as pickle
@@ -17,7 +15,7 @@ import numpy as np
 import sys
 from tqdm import tqdm
 import os
-sys.path.append('/fs/project/PCON0009/Au-scratch2/haoran/_projects/isoform_quantification/isoform_quantification')
+sys.path.append(os.path.dirname(os.path.realpath(__file__)) + '/isoform_quantification')
 from parse_annotation import parse_annotation
 ref_file_path = args.annotation
 READ_LEN=0
@@ -165,11 +163,8 @@ list_of_args = []
 num_reads_each_isoform = 1000
 for kde_model_path in [kde_model_path]:
     for rname in gene_isoforms_dict:
-        if rname != selected_rname:
-            continue
         for gname in gene_isoforms_dict[rname]:
             list_of_args.append((rname,gname,kde_model_path,num_reads_each_isoform))
-print(selected_rname)
 print(len(list_of_args))
 chunksize, extra = divmod(len(list_of_args), threads)
 if extra:
