@@ -1,4 +1,5 @@
 models/
+base/
 build_kde_model/models/
 build_kde_model/external_bin/
 # Byte-compiled / optimized / DLL files
