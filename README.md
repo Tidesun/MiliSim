@@ -1,5 +1,15 @@
 # MiniSim
 A realisitic long reads RNA-seq data simulator
+## Requirements
+### Dependency
+```
+Python>=3.6
+Linux operating system
+```
+The software has been tested with following software version
+```
+Python==3.9.7
+```
 ## Installation and set up pretrained models
 ### Installation
 ```
