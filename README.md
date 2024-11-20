@@ -1,4 +1,4 @@
-# MiniSim
+# miniSim
 A realisitic long reads RNA-seq data simulator <br>
 MiniSim utilizes kernel density estimation (KDE) models trained based on real ONT data to estimate 5' and 3' truncation length. Reads simulated by miniSim better represent the 5' and 3' truncation length distribution real ONT data
 ![Compare_truncation_miniSim and nanosim](https://github.com/Tidesun/MiniSim/blob/a34026cbd907c93008c4c7b7dc693640b8f29b98/Supplementary_Fig_19.png)
